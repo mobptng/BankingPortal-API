@@ -9,7 +9,7 @@ public interface AccountService {
 	public boolean isPinCreated(String accountNumber) ;
 	public void createPin(String accountNumber, String password, String pin) ;
 	public void updatePin(String accountNumber, String oldPIN, String password, String newPIN);
-	public void a(String a, String b, double c);
+	public void cashDeposit(String accountNumber, String pin, double amount);
 	public void cashWithdrawal(String accountNumber, String pin, double amount);
 	public void fundTransfer(String sourceAccountNumber, String targetAccountNumber, String pin, double amount);
 	
