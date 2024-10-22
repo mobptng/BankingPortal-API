@@ -1,5 +1,3 @@
-
-
 package com.webapp.bankingportal.service;
 
 import java.util.Date;
@@ -233,5 +231,4 @@ public class AccountServiceImpl implements AccountService {
         transaction.setTargetAccount(targetAccount);
         transactionRepository.save(transaction);
     }
-
 }
