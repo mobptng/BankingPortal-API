@@ -150,12 +150,6 @@
                          <version>1.2.1</version>
                      </dependency>
                  </dependencies>
-                <!--
-                <configuration>
-                    <targetClasses>
-                        <param>com.webapp.bankingportal.service.AuthService</param>
-                    </targetClasses>
-                </configuration> -->
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
