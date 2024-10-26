@@ -142,6 +142,11 @@
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
+                <configuration>
+                    <targetClasses>
+                        <param>com.webapp.bankingportal.service.AccountServiceImpl</param>
+                    </targetClasses>
+                </configuration>
                 <version>1.17.0</version>
                 <dependencies>
                      <dependency>
