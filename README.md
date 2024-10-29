@@ -13,10 +13,11 @@ from [Docker's official site](https://www.docker.com/get-started).
    docker compose
    ```
 If docker compose is installed, you'll see a list of docker compose commands. If not, you'll receive a "command not found" error.
+Alternatives like podman will do the trick as well. 
 
 ### MySQL
 
-Before running the project or the tests, we need a MySQL server with a database named `bankingapp`.
+Before running the project, we need a MySQL server with a database named `bankingapp`.
 To start it, run the docker-compose file from the `database` folder
 
     ```bash
@@ -33,3 +34,19 @@ mvn clean test jacoco:report
 ```
 
 The report will be generated in the `target/site/jacoco` folder.
+
+### PIT 
+
+[PIT](https://pitest.org) is a tool to perform mutation testing. It can be used to generate a report with
+
+```bash
+mvn clean org.pitest:pitest-maven:mutationCoverage
+```
+
+## Running the application
+
+1. Start up the database (see previous section)
+2. Create a copy of the `application.properties.sample` file called `application.properties`. Adjust the 
+`datasource.password` property to the value in the database setup. The mail section can be left unchanged (and
+exceptions due to it ignored).
+3. Run `mvn spring-boot:run`. The application should launch in a few seconds.
