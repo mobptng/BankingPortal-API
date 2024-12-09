@@ -22,6 +22,8 @@ import com.webapp.bankingportal.exception.OtpRetryLimitExceededException;
 import com.webapp.bankingportal.exception.PasswordResetException;
 import com.webapp.bankingportal.exception.UnauthorizedException;
 import com.webapp.bankingportal.exception.UserInvalidException;
+import com.webapp.bankingportal.exception.LoanNotFoundException;
+import com.webapp.bankingportal.util.ApiMessages;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -120,5 +122,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleGlobalException(Exception ex, WebRequest request) {
         return ResponseEntity.internalServerError()
                 .body("{\"message\": \"An unexpected error occurred: " + ex.getMessage() + "\"}");
+    }
+
+    @ExceptionHandler(LoanNotFoundException.class)
+    public ResponseEntity<String> handleLoanNotFoundException(LoanNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body("{\"message\": \"" + ApiMessages.LOAN_NOT_FOUND.getMessage() + "\"}");
     }
 }

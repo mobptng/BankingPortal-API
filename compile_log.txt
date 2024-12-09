@@ -2,34 +2,24 @@
 [INFO] 
 [INFO] ----------------------< com.webapp:bankingportal >----------------------
 [INFO] Building bankingportal 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:3.3.2:clean (default-clean) @ bankingportal ---
-[INFO] Deleting /generated/target
-[INFO] 
-[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ bankingportal ---
+[INFO] --- jacoco:0.8.7:prepare-agent (prepare-agent) @ bankingportal ---
 [INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/generated/target/jacoco.exec
 [INFO] 
-[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ bankingportal ---
-[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] --- resources:3.3.1:resources (default-resources) @ bankingportal ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
 [INFO] Copying 3 resources from src/main/resources to target/classes
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ bankingportal ---
-[INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 75 source files with javac [debug parameters release 17] to target/classes
-[INFO] Annotation processing is enabled because one or more processors were found
-  on the class path. A future release of javac may disable annotation processing
-  unless at least one processor is specified by name (-processor), or a search
-  path is specified (--processor-path, --processor-module-path), or annotation
-  processing is enabled explicitly (-proc:only, -proc:full).
-  Use -Xlint:-options to suppress this message.
-  Use -proc:none to disable annotation processing.
+[INFO] --- compiler:3.13.0:compile (default-compile) @ bankingportal ---
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
-[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ bankingportal ---
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ bankingportal ---
 [INFO] skip non existing resourceDirectory /generated/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ bankingportal ---
-[INFO] Recompiling the module because of changed dependency.
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ bankingportal ---
+[INFO] Recompiling the module because of changed source code.
 [INFO] Compiling 2 source files with javac [debug parameters release 17] to target/test-classes
 [INFO] Annotation processing is enabled because one or more processors were found
   on the class path. A future release of javac may disable annotation processing
@@ -41,6 +31,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  30.902 s
-[INFO] Finished at: 2024-11-19T08:05:07Z
+[INFO] Total time:  21.005 s
+[INFO] Finished at: 2024-12-09T09:15:50Z
 [INFO] ------------------------------------------------------------------------

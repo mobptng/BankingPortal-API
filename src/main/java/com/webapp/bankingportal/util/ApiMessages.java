@@ -66,7 +66,12 @@ public enum ApiMessages {
     USER_PHONE_NUMBER_EMPTY_ERROR("Phone number cannot be empty"),
     USER_PHONE_NUMBER_INVALID_ERROR("Invalid phone number: %s for country code: %s"),
     USER_REGISTRATION_SUCCESS("User registered successfully"),
-    USER_UPDATE_SUCCESS("User updated successfully");
+    USER_UPDATE_SUCCESS("User updated successfully"),
+    LOAN_APPLICATION_SUCCESS("Loan applied successfully"),
+    LOAN_APPROVAL_SUCCESS("Loan application approved successfully"),
+    LOAN_REPAYMENT_SUCCESS("Loan repayment processed successfully"),
+    LOAN_NOT_FOUND("Requested loan could not be found"),
+    LOAN_AMOUNT_EXCEEDS_LIMIT("Requested loan amount exceeds the maximum allowable limit");
 
     @Getter
     private final String message;
