@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webapp.bankingportal.dto.AmountRequest;
@@ -93,6 +94,13 @@ public class AccountController {
     public ResponseEntity<String> getAllTransactionsByAccountNumber() {
         val transactions = transactionService
                 .getAllTransactionsByAccountNumber(LoggedinUser.getAccountNumber());
+        return ResponseEntity.ok(JsonUtil.toJson(transactions));
+    }
+
+    @GetMapping("/transactions/search")
+    public ResponseEntity<String> searchTransactions(@RequestParam String type) {
+        val transactions = transactionService
+                .searchTransactionsByType(LoggedinUser.getAccountNumber(), type);
         return ResponseEntity.ok(JsonUtil.toJson(transactions));
     }
 
