@@ -8,4 +8,6 @@ public interface TransactionService {
 
 	List<TransactionDTO> getAllTransactionsByAccountNumber(String accountNumber);
 
+	List<TransactionDTO> searchTransactionsByType(String accountNumber, String type);
+
 }
